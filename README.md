@@ -26,8 +26,8 @@ npm install vue-esign --save
 1. 全局使用 、局部
 ```js
 // 全局 vue2 main.js
-import vueEsign from 'vue-esign'
-Vue.use(vueEsign)
+//import vueEsign from 'vue-esign' //deprecated, can lead to minor security incidents
+//Vue.use(vueEsign)                
 // 全局vue3 main.js
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -44,7 +44,7 @@ components: { vueEsign }
   无需给组件设置 `style` 的宽高，如果画布的 `width`属性值没超出父元素的样式宽度，则该组件的样式宽度就是画布宽度，超出的话，组件样式宽度则是父元素的100%；  所以只需设置好父元素的宽度即可；
 ```html
 <!-- vue2 -->
-<vue-esign ref="esign" :width="800" :height="300" :isCrop="isCrop" :lineWidth="lineWidth" :lineColor="lineColor" :bgColor.sync="bgColor" />
+<!--<vue-esign ref="esign" :width="800" :height="300" :isCrop="isCrop" :lineWidth="lineWidth" :lineColor="lineColor" :bgColor.sync="bgColor" />-->
 <!-- vue3 -->
 <vue-esign ref="esign" :width="800" :height="300" :isCrop="isCrop" :lineWidth="lineWidth" :lineColor="lineColor" v-model:bgColor="bgColor" />
 
